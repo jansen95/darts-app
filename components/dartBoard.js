@@ -18,7 +18,7 @@ export default function DartBoard() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            socket.emit('request-frame', {});
+            socket.emit('request-manipulated-frame', {});
         }, TBF);
         return () => clearInterval(interval);
     }, []);
